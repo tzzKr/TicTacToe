@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,96 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
+
 <body>
-    
+    <div class="ttt-field">
+
+        <div class="ttt-field-container">
+            <div class="winCenter">
+                <div class="d-none" id="crownP1"><img src="img/crownP1.png" alt="" style="padding-left: 55px;"></div>
+                <div id="player-1" class="Player P1">
+                    Player 1
+                    <img id="" class="" src="img/circle.png" alt="">
+                </div>
+            </div>
+
+            <div class="lines">
+
+                <div id="line-0" class="horizontal-line" style="top: 65px;"></div>
+                <div id="line-1" class="horizontal-line" style="top: 210px;"></div>
+                <div id="line-2" class="horizontal-line" style="top: 355px;"></div>
+                <div id="line-3" class="horizontal-line vertical-line" style="top: 210px; left: -142px;"></div>
+                <div id="line-4" class="horizontal-line vertical-line" style="top: 210px; left: 3px;"></div>
+                <div id="line-5" class="horizontal-line vertical-line" style="top: 210px; left: 148px;"></div>
+                <div id="line-6" class="horizontal-line across-line"
+                    style="top: 210px; left: -69px; transform: rotate(45deg) scaleX(0.0);"></div>
+                <div id="line-7" class="horizontal-line across-line"
+                    style="top: 210px; left: -69px; transform: rotate(-45deg) scaleX(0.0);"></div>
+
+
+
+                <table>
+                    <tr>
+                        <td class="" id="td-hover" onclick="fillShape(0)">
+                            <img id="circle-0" class="shape d-none" src="img/circle.png" alt="">
+                            <img id="cross-0" class="shape d-none" src="img/cross.png" alt="">
+                        </td>
+                        <td class="" id="td-hover" onclick="fillShape(1)">
+                            <img id="circle-1" class="shape d-none" src="img/circle.png" alt="">
+                            <img id="cross-1" class="shape d-none" src="img/cross.png" alt="">
+                        </td>
+                        <td class="" id="td-hover" onclick="fillShape(2)">
+                            <img id="circle-2" class="shape d-none" src="img/circle.png" alt="">
+                            <img id="cross-2" class="shape d-none" src="img/cross.png" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="" id="td-hover" onclick="fillShape(3)">
+                            <img id="circle-3" class="shape d-none" src="img/circle.png" alt="">
+                            <img id="cross-3" class="shape d-none" src="img/cross.png" alt="">
+                        </td>
+                        <td class="" id="td-hover" onclick="fillShape(4)">
+                            <img id="circle-4" class="shape d-none" src="img/circle.png" alt="">
+                            <img id="cross-4" class="shape d-none" src="img/cross.png" alt="">
+                        </td>
+                        <td class="" id="td-hover" onclick="fillShape(5)">
+                            <img id="circle-5" class="shape d-none" src="img/circle.png" alt="">
+                            <img id="cross-5" class="shape d-none" src="img/cross.png" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="" id="td-hover" onclick="fillShape(6)">
+                            <img id="circle-6" class="shape d-none" src="img/circle.png" alt="">
+                            <img id="cross-6" class="shape d-none" src="img/cross.png" alt="">
+                        </td>
+                        <td class="" id="td-hover" onclick="fillShape(7)">
+                            <img id="circle-7" class="shape d-none" src="img/circle.png" alt="">
+                            <img id="cross-7" class="shape d-none" src="img/cross.png" alt="">
+                        </td>
+                        <td class="" id="td-hover" onclick="fillShape(8)">
+                            <img id="circle-8" class="shape d-none" src="img/circle.png" alt="">
+                            <img id="cross-8" class="shape d-none" src="img/cross.png" alt="">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <div class="d-none" id="crownP2"><img src="img/crownP2.png" alt="" style="padding-left: 155px;"></div>
+                <div id="player-2" class="Player P2 player-inactive">
+
+                    <img id="" class="" src="img/cross.png" alt="">
+                    Player 2
+                </div>
+            </div>
+        </div>
+
+        <button onclick="restartGame()" id="restart" class="restart d-none">Restart</button>
+
+
+    </div>
+
+
 </body>
+
 </html>
