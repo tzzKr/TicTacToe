@@ -1,6 +1,7 @@
 let fields = [];
 let gameOver = false;
 let currentShape = 'cross'
+let countMoves = 0;
 
 function fillShape(id) {
 
@@ -14,7 +15,9 @@ if (!fields[id] && !gameOver) {
         document.getElementById('player-1').classList.remove('player-inactive');
         document.getElementById('player-2').classList.add('player-inactive');
     }
+   
     fields[id] = currentShape;
+    countMoves++;
     draw();
     checkWin();
 }
@@ -31,6 +34,7 @@ function draw() {
         if (fields[i] == 'cross') {
             document.getElementById('cross-' + i).classList.remove('d-none');
         }
+        
 
     }
 }
@@ -88,6 +92,11 @@ function checkWin() {
     if (winner == 'circle') {
         document.getElementById('crownP1').classList.remove('d-none')
     }
+    if (countMoves == 9) {
+    document.getElementById('restart').classList.remove('d-none');
+        
+    }
+   
 }
 
 function restartGame() {
@@ -96,9 +105,9 @@ function restartGame() {
     document.getElementById('crownP2').classList.add('d-none');
     document.getElementById('crownP1').classList.add('d-none');
     document.getElementById('restart').classList.add('d-none');
-    
+    countMoves = 0;
     for (let i = 0; i < 8; i++) {
-    document.getElementById(`line-${i}`).classList.add('d-none');         
+    document.getElementById(`line-${i}`).style.transform = 'scaleX(0)';         
     }
     for (let i = 0; i < 9; i++) {
         document.getElementById(`circle-${i}`).classList.add('d-none');         

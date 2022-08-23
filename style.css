@@ -120,9 +120,11 @@ tr td:last-child {
     border-radius: 15px;
     height: 50px;
     width: 110px;
-    margin-top: 200px;
+    
     cursor: pointer;
     font-size: 20px;
+    position: absolute;
+    bottom: 100px;
 }
 .restart:hover {
     background-color: rgba(255, 178, 12, 0.727);
